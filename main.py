@@ -94,7 +94,7 @@ class AutoReport(object):
         homeAddressStatus = self.__browser.find_element_by_id(homeAddressStatusElementId)
         homeAddressStatusCLassAttributes = homeAddressStatus.get_attribute("class")
         if "f-checked" not in homeAddressStatusCLassAttributes: homeAddressStatus.click()
-        submitButton = self.__browser.find_element_by_id("p1_ctl00_btnSubmit")
+        submitButton = self.__browser.find_element_by_id("p1_ctl01_btnSubmit")
         submitButton.click()
         self.__browser.implicitly_wait(1)
         try:
