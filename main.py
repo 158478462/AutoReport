@@ -107,7 +107,7 @@ class AutoReport(object):
         submitConfirmButton.click()
         self.__browser.implicitly_wait(1)
         returnMessage = self.__browser.find_element_by_class_name("f-messagebox-message").text
-        assert returnMessage == "提交成功", "Submit Failed"
+        assert "成功" in returnMessage, "Submit Failed"
         # TODO handle error
 
 
@@ -136,3 +136,4 @@ class AutoReport(object):
 if __name__ == "__main__":
     flow = AutoReport(id=sys.argv[1], password=sys.argv[2], inShanghai=sys.argv[3], onCampus=sys.argv[4], isHomeAddress=sys.argv[5])
     flow.report()
+    print()
